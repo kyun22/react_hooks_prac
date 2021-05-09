@@ -1,16 +1,13 @@
-import {useInput} from "./useInput";
+import {useEffect, useRef, useState} from "react";
 
 function App() {
-    const maxLen = value => value.length <= 10;
-    const name = useInput("Mr. Shlee", maxLen);
-    const email = useInput("@");
-
-  return (
-    <div className="App">
-      Hello World!
-        <input type="text" {...name}/>
-    </div>
-  );
+    const begForLife = () => console.log("plz dont leave");
+    useBeforeLeave(begForLife());
+    return (
+        <div className="App">
+            <h1>hi</h1>
+        </div>
+    );
 }
 
 export default App;
